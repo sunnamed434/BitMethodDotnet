@@ -10,7 +10,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        ModuleDefMD moduleDefMD = ModuleDefMD.Load(args[0]);
+        ModuleDefMD moduleDefMD = ModuleDefMD.Load(args[0], new ModuleCreationOptions(CLRRuntimeReaderKind.Mono));
         if (moduleDefMD.HasTypes)
         {
             foreach (TypeDef type in moduleDefMD.Types)
